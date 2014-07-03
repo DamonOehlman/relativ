@@ -8,7 +8,7 @@ configured.
 
 [![NPM](https://nodei.co/npm/relativ.png)](https://nodei.co/npm/relativ/)
 
-
+[![unstable](https://img.shields.io/badge/stability-unstable-yellowgreen.svg)](https://github.com/dominictarr/stability#unstable) [![Build Status](https://img.shields.io/travis/DamonOehlman/relativ.svg?branch=master)](https://travis-ci.org/DamonOehlman/relativ) 
 
 ## Example Usage
 
