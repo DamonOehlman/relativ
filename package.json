@@ -1,0 +1,25 @@
+{
+  "name": "relativ",
+  "version": "0.0.0",
+  "description": "Convert position values within the bounds of an object to relative offsets given a based width and height",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/all.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DamonOehlman/relativ.git"
+  },
+  "keywords": [
+    "coordinate",
+    "relative",
+    "point",
+    "2d"
+  ],
+  "author": "Damon Oehlman <damon.oehlman@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DamonOehlman/relativ/issues"
+  },
+  "homepage": "https://github.com/DamonOehlman/relativ"
+}
