@@ -13,3 +13,13 @@ test('transform [0,0]', function(t) {
   t.plan(1);
   t.deepEqual(transform([0, 0]), [0, 0]);
 });
+
+test('transform [800,600]', function(t) {
+  t.plan(1);
+  t.deepEqual(transform([800, 600]), [MAXVAL, MAXVAL]);
+});
+
+test('transform [400,300]', function(t) {
+  t.plan(1);
+  t.deepEqual(transform([400, 300]), [MAXVAL >> 1, MAXVAL >> 1]);
+});
