@@ -23,3 +23,18 @@ test('transform [500,400]', function(t) {
   t.plan(1);
   t.deepEqual(transform([500, 400]), [MAXVAL >> 1, MAXVAL >> 1]);
 });
+
+test('unpack [0, 0]', function(t) {
+  t.plan(1);
+  t.deepEqual(transform.unpack([0, 0]), [100, 100]);
+});
+
+test('unpack [MAXVAL, MAXVAL]', function(t) {
+  t.plan(1);
+  t.deepEqual(transform.unpack([MAXVAL, MAXVAL]), [900, 700]);
+});
+
+test('unpack [MAXVAL / 2, MAXVAL / 2]', function(t) {
+  t.plan(1);
+  t.deepEqual(transform.unpack([MAXVAL/2, MAXVAL/2]), [500, 400]);
+});
