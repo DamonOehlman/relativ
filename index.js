@@ -20,13 +20,23 @@ module.exports = function(bounds, max) {
   var maxX = minX + width;
   var maxY = minY + height;
 
-  // initialise max to the default value if not provided
-  max = max || (Math.pow(2, 16) - 1);
-
-  return function(vec) {
+  function pack(vec) {
     var relX = vec[0] - minX;
     var relY = vec[1] - minY;
 
     return [((relX / width) * max) | 0, ((relY / height) * max) | 0];
-  };
+  }
+
+  function unpack(vec) {
+    return [
+      minX + ((vec[0] / max * width) | 0),
+      minY + ((vec[1] / max * height) | 0)
+    ];
+  }
+
+  // initialise max to the default value if not provided
+  max = max || (Math.pow(2, 16) - 1);
+  pack.unpack = unpack;
+
+  return pack;
 };
