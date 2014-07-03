@@ -1,7 +1,7 @@
 {
   "name": "relativ",
   "version": "0.0.0",
-  "description": "Convert position values within the bounds of an object to relative offsets given a based width and height",
+  "description": "Convert coordinate within the bounds of an object to relative offsets given a based width and height",
   "main": "index.js",
   "scripts": {
     "test": "node test/all.js",
