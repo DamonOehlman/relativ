@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/DamonOehlman/relativ/issues"
   },
-  "homepage": "https://github.com/DamonOehlman/relativ"
+  "homepage": "https://github.com/DamonOehlman/relativ",
+  "devDependencies": {
+    "tape": "^2.13.3"
+  }
 }
