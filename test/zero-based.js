@@ -3,7 +3,7 @@ var relativ = require('../');
 var transform;
 var MAXVAL = Math.pow(2, 16) - 1;
 
-test('create our transformer', function(t) {
+test('create our transformer using [0, 0, 800, 600]', function(t) {
   t.plan(1);
   transform = relativ([0, 0, 800, 600], MAXVAL);
   t.equal(typeof transform, 'function');
