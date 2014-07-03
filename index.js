@@ -29,14 +29,21 @@ module.exports = function(bounds, max) {
 
   function unpack(vec) {
     return [
-      minX + ((vec[0] / max * width) | 0),
-      minY + ((vec[1] / max * height) | 0)
+      ((vec[0] / max * width) | 0),
+      ((vec[1] / max * height) | 0)
     ];
+  }
+
+  function offset(vec) {
+    return [ vec[0] + minX, vec[1] + minY];
   }
 
   // initialise max to the default value if not provided
   max = max || (Math.pow(2, 16) - 1);
+
+  // patch the unpack and offset functions
   pack.unpack = unpack;
+  pack.offset = offset;
 
   return pack;
 };

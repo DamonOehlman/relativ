@@ -26,15 +26,15 @@ test('transform [500,400]', function(t) {
 
 test('unpack [0, 0]', function(t) {
   t.plan(1);
-  t.deepEqual(transform.unpack([0, 0]), [100, 100]);
+  t.deepEqual(transform.unpack([0, 0]), [0, 0]);
 });
 
 test('unpack [MAXVAL, MAXVAL]', function(t) {
   t.plan(1);
-  t.deepEqual(transform.unpack([MAXVAL, MAXVAL]), [900, 700]);
+  t.deepEqual(transform.unpack([MAXVAL, MAXVAL]), [800, 600]);
 });
 
 test('unpack [MAXVAL / 2, MAXVAL / 2]', function(t) {
   t.plan(1);
-  t.deepEqual(transform.unpack([MAXVAL/2, MAXVAL/2]), [500, 400]);
+  t.deepEqual(transform.unpack([MAXVAL/2, MAXVAL/2]), [400, 300]);
 });
