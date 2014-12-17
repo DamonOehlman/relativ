@@ -13,8 +13,8 @@ module.exports = function(el) {
   targetX = 0;
   targetY = 0;
   while (el) {
-    targetX += offsetTarget.offsetLeft;
-    targetY += offsetTarget.offsetTop;
+    targetX += el.offsetLeft;
+    targetY += el.offsetTop;
 
     el = el.offsetParent;
   }
