@@ -1,6 +1,6 @@
 {
   "name": "relativ",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "description": "Convert coordinate within the bounds of an object to relative offsets given a based width and height",
   "main": "index.js",
   "scripts": {
