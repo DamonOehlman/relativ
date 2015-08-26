@@ -9,15 +9,9 @@ module.exports = function(el) {
   targetWidth = rect ? rect.width : 0;
   targetHeight = rect ? rect.height : 0;
 
-  // get the offset from offsetLeft and offsetTop
-  targetX = 0;
-  targetY = 0;
-  while (el) {
-    targetX += el.offsetLeft;
-    targetY += el.offsetTop;
-
-    el = el.offsetParent;
-  }
+  // Use the bounding rects left & top
+  targetX = rect ? rect.left : 0;
+  targetY = rect ? rect.top : 0;
 
   return [targetX, targetY, targetWidth, targetHeight];
 };
