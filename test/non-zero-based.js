@@ -24,6 +24,16 @@ test('transform [500,400]', function(t) {
   t.deepEqual(transform([500, 400]), [MAXVAL >> 1, MAXVAL >> 1]);
 });
 
+test('transform [1000, 800] (larger than width/height)', function(t) {
+  t.plan(1);
+  t.deepEqual(transform([1000, 800]), [MAXVAL, MAXVAL]);
+});
+
+test('transform [0, 50] (smaller than min width/height)', function(t) {
+  t.plan(1);
+  t.deepEqual(transform([0, 50]), [0, 0]);
+});
+
 test('unpack [0, 0]', function(t) {
   t.plan(1);
   t.deepEqual(transform.unpack([0, 0]), [0, 0]);

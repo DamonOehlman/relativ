@@ -20,11 +20,18 @@ module.exports = function(bounds, max) {
   var maxX = minX + width;
   var maxY = minY + height;
 
-  function pack(vec) {
-    var relX = vec[0] - minX;
-    var relY = vec[1] - minY;
+  function relative(val, min, size) {
+    var rel = (val - min) / size;
+    // Only allow negative and values > max if unconstrained
+    if (rel > 1) rel = 1;
+    if (rel < 0) rel = 0;
+    return rel * max;
+  }
 
-    return [((relX / width) * max) | 0, ((relY / height) * max) | 0];
+  function pack(vec) {
+    var relX = relative(vec[0], minX, width);
+    var relY = relative(vec[1], minY, height);
+    return [relX | 0, relY | 0];
   }
 
   function unpack(vec) {
